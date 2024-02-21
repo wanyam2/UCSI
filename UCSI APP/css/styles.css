@@ -1,0 +1,141 @@
+/* styles.css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 430px;
+    height: 932px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    position: relative;
+    width: 430px;
+    height: 932px;
+    background-color: gray;
+
+}
+
+.show-more {
+    left: 185px;
+    top: 886px;
+    width: 153px;
+    height: 5px;
+    font-size: 0.75rem;
+    color: #fa0e0e;
+}
+
+.course-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -2px;
+    top: 16px;
+    width: 431px;
+    height: 322px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.course-title {
+    left: 4px;
+    top: 659px;
+    width: 228px;
+    height: 47px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 350px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-bottom-width: thin;
+    margin-bottom: -20px;
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 51px;
+}
+
+
+
+.course-thumbnail {
+
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 100px;
+    width: 100%;
+    height: 80px;
+}
+
+.course-thumbnail-subContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 4vw 0px 4vw;
+    border: 1px solid #282828;
+}
+
+.thumbnail-details {
+    flex: 1;
+}
+
+.course-name {
+    left: 4px;
+    top: 812px;
+    width: 85px;
+    height: 2.5px;
+    font-size: 0.75rem;
+    color: black;
+    margin: 0vh 0px 3vw 1vw;
+
+}
+
+.course-price {
+
+    left: 24px;
+    top: 826px;
+    font-size: 10px;
+    color: black;
+    margin: 0px 0px 0px 15vw;
+}
+
+.logo {
+    left: 3px;
+    top: 3.5px;
+    width: 138px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.icon + .icon {
+    margin-left: 12px;
+}
+
+.show-more-box {
+    margin-top: 3vh;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #282828;
+    border-radius: 30px;
+}
