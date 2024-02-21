@@ -1,0 +1,351 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 50px;
+}
+
+.logo {
+    width: 150px; /* Adjust the size as needed */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .logo-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar a[href="#"] {
+        visibility: hidden;
+    }
+
+    .logo {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        display: inline-block;
+        width: 20px;
+        margin-left: 20px;
+    }
+
+    .icon-logo {
+        display: inline-block;
+    }
+
+    .navbar a:not([href="#"]) {
+        display: inline-block; /* 텍스트가 없어진 아이템들만 보이도록 설정 */
+        margin-left: 10px; /* 텍스트와 아이콘 로고 사이에 간격을 줌 */
+    }
+
+
+}
+
+
+.icon {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 200px;
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 0 50px; /* Adjust padding as needed */
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    position: relative;
+    background-color: rgb(255, 179, 24);
+    color: #fff; /* Assuming you want a white text color */
+}
+
+.hero-overlay {
+    z-index: 1;
+    width: 50%; /* Adjust the width of the text container */
+    padding: 20px; /* Add some padding around the text */
+}
+
+.hero-image {
+    max-width: 45%; /* Adjust the width of the image */
+    height: auto;
+    position: absolute;
+    right: 0; /* Align the image to the right side of the section */
+    bottom: 0; /* Align the image to the bottom of the section */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: auto; /* Adjust the height for smaller screens */
+        flex-direction: column; /* Stack the items on smaller screens */
+        padding: 20px;
+    }
+
+    .hero-overlay {
+        width: 100%;
+        order: 1; /* Make sure the text is above the image */
+    }
+
+    .hero-image {
+        max-width: 80%; /* Increase the image size on smaller screens */
+        position: relative;
+        right: 0; /* Center the image on smaller screens */
+        bottom: 0;
+        order: 2; /* Image comes after the text */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 100%; /* Image takes full width on smallest screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        max-width: 90%; /* 더 작은 모바일 화면에서 이미지 크기 조정 */
+    }
+}
+
+.features-section {
+    display: flex;
+    flex-wrap: wrap; /* 필요한 경우 줄바꿈을 허용 */
+    justify-content: space-around; /* 항목 사이에 공간을 균일하게 분발 */
+    padding: 20px;
+    background: #ffffff; /* 배경색 조정 가능 */
+}
+
+.feature {
+    flex-basis: calc(25% - 40px); /* 4개의 항목이 한 줄에 표시되도록 계산 (갭 포함) */
+    margin: 10px; /* 항목 사이의 간격 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.feature img {
+    max-width: 100%; /* 이미지 너비를 feature 너비에 맞추어 조정 */
+    height: auto; /* 이미지 높이가 비율을 유지하도록 설정 */
+}
+
+.feature h3, .feature p, .feature .learn-more {
+    margin: 10px 0; /* 각 텍스트 요소의 상하 간격 조정 */
+}
+
+/* 반응형 디자인을 위한 추가적인 미디어 쿼리 */
+@media (max-width: 1024px) {
+    .feature {
+        flex-basis: calc(50% - 40px); /* 화면이 좁을 때 2개의 항목이 한 줄에 표시되도록 조정 */
+    }
+}
+
+@media (max-width: 768px) {
+    .feature {
+        flex-basis: 100%; /* 더 작은 화면에서는 항목이 화면 전체 너비를 차지하도록 조정 */
+    }
+}
+
+/* 여기부터 lastest-course 부분 */
+
+.latest-courses-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.latest-courses-section h2 {
+    margin-bottom: 1em;
+}
+
+.latest-courses-section .course-item {
+    max-width: 100%; /* 각 항목의 너비를 그리드에 맞게 조정합니다. */
+    margin: auto; /* 중앙 정렬을 위해 추가합니다. */
+}
+
+.latest-courses-section .course-item img {
+    width: 100%; /* 너비는 컨테이너에 맞게 조정됩니다. */
+    height: auto; /* 이미지 높이를 자동으로 조정합니다. 비율을 유지하도록 설정하세요. */
+    object-fit: contain; /* 이미지가 컨테이너에 맞도록 조정되면서 비율을 유지합니다. */
+}
+
+
+@media (max-width: 768px) {
+    .latest-courses-section {
+        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2개의 항목만 표시 */
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.icon {
+    width: 24px;
+    margin-left: 20px;
+}
+
+
+
+
+.course-carousel {
+    position: relative;
+    max-width: 100%; /* 최대 너비를 100%로 설정하여 부모 컨테이너의 크기에 맞춤 */
+    overflow: hidden;
+}
+
+.course-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.course-item {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 10px; /* 좌우 간격 설정 */
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.course-item {
+    flex: 0 0 auto; /* 각 아이템의 크기가 유동적으로 변하도록 설정 */
+    width: 20%; /* 기본으로 5개의 아이템을 한 줄에 표시 */
+}
+
+.course-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.course-info h4 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.course-info p {
+    margin: 0;
+    color: #666;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev:hover, .next:hover {
+    background-color: #f0f0f0;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* 반응형 디자인 설정 */
+@media (min-width: 1200px) {
+    /* 큰 화면에서는 7개의 아이템 표시 */
+    .course-item {
+        flex: 0 0 calc(100% / 7 - 20px);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* 중간 크기의 화면에서는 5개의 아이템 표시 */
+    .course-item {
+        flex: 0 0 calc(100% / 5 - 20px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* 작은 화면에서는 3개의 아이템 표시 */
+    .course-item {
+        flex: 0 0 calc(100% / 3 - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    /* 매우 작은 화면에서는 2개의 아이템 표시 */
+    .course-item {
+        flex: 0 0 calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 575px) {
+    /* 모바일 화면에서는 1개의 아이템 표시 */
+    .course-item {
+        flex: 0 0 100%;
+        margin: 0 0 20px 0; /* 아래쪽에 간격 추가 */
+    }
+
+    .prev, .next {
+        display: none; /* 모바일에서는 슬라이드 버튼 숨김 */
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .course-item {
+        width: 25%; /* 화면 너비가 1200px 이하일 때 4개의 아이템을 한 줄에 표시 */
+    }
+}
+
+@media (max-width: 900px) {
+    .course-item {
+        width: 33.3333%; /* 화면 너비가 900px 이하일 때 3개의 아이템을 한 줄에 표시 */
+    }
+}
+
+@media (max-width: 600px) {
+    .course-item {
+        width: 50%; /* 화면 너비가 600px 이하일 때 2개의 아이템을 한 줄에 표시 */
+    }
+}
+
+@media (max-width: 400px) {
+    .course-item {
+        width: 100%; /* 화면 너비가 400px 이하일 때 1개의 아이템을 한 줄에 표시 */
+    }
+}
+
