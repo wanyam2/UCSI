@@ -78,5 +78,3 @@ function moveSlide(step) {
 
     slides.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
 }
-
-js
