@@ -1,37 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     const coursesData = [
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course1',
             code: 'CS101'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course2',
             code: 'CS201'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course3',
             code: 'CS301'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course4',
             code: 'DB401'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course5',
             code: 'OS501'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course6',
             code: 'CN601'
         },
         {
-            image: '../img/course_image.jpg',
+            image: '../img/latest-course-image.jpg',
             name: 'course7',
             code: 'AI701'
         }
