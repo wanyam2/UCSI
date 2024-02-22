@@ -13,7 +13,7 @@ body, h1, h2, h3, p {
 }
 
 .logo {
-    width: 150px; /* Adjust the size as needed */
+    width: 150px;
 }
 
 .logo-container {
@@ -63,8 +63,12 @@ body, h1, h2, h3, p {
         display: inline-block; /* 텍스트가 없어진 아이템들만 보이도록 설정 */
         margin-left: 10px; /* 텍스트와 아이콘 로고 사이에 간격을 줌 */
     }
+}
 
-
+@media (max-width: 768px) {
+    .navbar a {
+        display: none; /* 이미지 숨김 */
+    }
 }
 
 
@@ -78,65 +82,106 @@ body, h1, h2, h3, p {
 }
 
 
+/* 기본 스타일 */
 .hero-section {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align text to the left */
-    padding: 0 50px; /* Adjust padding as needed */
-    height: 100vh; /* Full viewport height */
+    justify-content: flex-start;
+    padding: 0 50px;
+    height: 100vh;
+    background-color: #FFB318; /* ODL 노란색 배경 */
+    color: #fff;
     background-size: cover;
     position: relative;
-    background-color: rgb(255, 179, 24);
-    color: #fff; /* Assuming you want a white text color */
 }
 
 .hero-overlay {
-    z-index: 1;
-    width: 50%; /* Adjust the width of the text container */
-    padding: 20px; /* Add some padding around the text */
+    z-index: 2;
+    width: 50%;
 }
 
 .hero-image {
-    max-width: 45%; /* Adjust the width of the image */
+    width: 40%;
     height: auto;
     position: absolute;
-    right: 0; /* Align the image to the right side of the section */
-    bottom: 0; /* Align the image to the bottom of the section */
+    right: 50px; /* 오른쪽 여백 */
+    bottom: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .hero-section {
-        height: auto; /* Adjust the height for smaller screens */
-        flex-direction: column; /* Stack the items on smaller screens */
-        padding: 20px;
+/* 뷰포트 너비에 따라 폰트 크기와 이미지 가시성을 조정하는 미디어 쿼리 */
+@media (max-width: 1200px) {
+    .hero-overlay h1 {
+        font-size: 6rem; /* 폰트 크기 감소 */
     }
 
-    .hero-overlay {
-        width: 100%;
-        order: 1; /* Make sure the text is above the image */
+    .hero-overlay h3, .hero-overlay h4 {
+        font-size: 1.75rem; /* 폰트 크기 감소 */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-overlay h1 {
+        font-size: 5rem; /* 더 작은 폰트 크기 */
+    }
+
+    .hero-overlay h3, .hero-overlay h4 {
+        font-size: 1.5rem; /* 더 작은 폰트 크기 */
     }
 
     .hero-image {
-        max-width: 80%; /* Increase the image size on smaller screens */
-        position: relative;
-        right: 0; /* Center the image on smaller screens */
-        bottom: 0;
-        order: 2; /* Image comes after the text */
+        width: 50%; /* 이미지 크기 조정 */
     }
+}
+
+.hero-overlay h1 {
+    font-size: 8rem; /* 제목의 글꼴 크기를 조정합니다. */
+    color: #ffffff; /* 제목의 글꼴 색상을 조정합니다. */
+    margin-bottom: 2rem; /* 제목 아래의 여백을 조정합니다. */
+}
+
+.hero-overlay h3 {
+    font-size: 2rem; /* 문단의 글꼴 크기를 조정 */
+    color: #333333; /* 문단의 글꼴 색상을 조정 */
+    margin-bottom: 1rem; /* 문단 아래의 여백을 조정 */
+}
+
+
+.hero-overlay h4 {
+    font-size: 1.5rem; /* 문단의 글꼴 크기를 조정 */
+    color: #333333; /* 문단의 글꼴 색상을 조정 */
+    margin-bottom: 2rem; /* 문단 아래의 여백을 조정 */
 }
 
 @media (max-width: 768px) {
+    .hero-overlay {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4rem; /* 더 작은 폰트 크기 */
+    }
+
+    .hero-overlay h3, .hero-overlay h4 {
+        font-size: 1.25rem; /* 더 작은 폰트 크기 */
+    }
+
     .hero-image {
-        max-width: 100%; /* Image takes full width on smallest screens */
+        display: none; /* 이미지 숨김 */
     }
 }
 
-@media (max-width: 480px) {
-    .hero-image {
-        max-width: 90%; /* 더 작은 모바일 화면에서 이미지 크기 조정 */
+@media (max-width: 576px) {
+    .hero-overlay h1 {
+        font-size: 3rem; /* 더 작은 폰트 크기 */
+    }
+
+    .hero-overlay h3, .hero-overlay h4 {
+        font-size: 1rem; /* 더 작은 폰트 크기 */
     }
 }
+
+
 
 .features-section {
     display: flex;
@@ -187,14 +232,14 @@ body, h1, h2, h3, p {
 }
 
 .latest-courses-section .course-item {
-    max-width: 100%; /* 각 항목의 너비를 그리드에 맞게 조정합니다. */
-    margin: auto; /* 중앙 정렬을 위해 추가합니다. */
+    max-width: 100%; /* 각 항목의 너비를 그리드에 맞게 조정 */
+    margin: auto; /* 중앙 정렬을 위해 추가 */
 }
 
 .latest-courses-section .course-item img {
-    width: 100%; /* 너비는 컨테이너에 맞게 조정됩니다. */
-    height: auto; /* 이미지 높이를 자동으로 조정합니다. 비율을 유지하도록 설정하세요. */
-    object-fit: contain; /* 이미지가 컨테이너에 맞도록 조정되면서 비율을 유지합니다. */
+    width: 100%; /* 너비는 컨테이너에 맞게 조정 */
+    height: auto; /* 이미지 높이를 자동으로 조정합니다. 비율을 유지하도록 설정 */
+    object-fit: contain; /* 이미지가 컨테이너에 맞도록 조정되면서 비율을 유지 */
 }
 
 
