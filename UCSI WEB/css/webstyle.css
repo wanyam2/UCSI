@@ -9,11 +9,11 @@ body, h1, h2, h3, p {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 5px 50px;
+    padding: 10px 50px;
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
 }
 
 .logo-container {
@@ -22,11 +22,17 @@ body, h1, h2, h3, p {
 }
 
 .navbar a {
+
     text-decoration: none;
     color: #333;
     margin: 0 15px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.icon {
+    width: 24px;
+    margin-left: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -51,7 +57,7 @@ body, h1, h2, h3, p {
 
     .icon {
         display: inline-block;
-        width: 20px;
+        width: 24px;
         margin-left: 20px;
     }
 
@@ -72,6 +78,11 @@ body, h1, h2, h3, p {
     .navbar a {
         display: none; /* 이미지 숨김 */
     }
+    .icon {
+        display: inline-block;
+        width: 22px;
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -83,18 +94,26 @@ body, h1, h2, h3, p {
     }
 }
 
-.icon {
-    width: 20px;
-    margin-left: 20px;
+@media (max-width: 280px) {
+    .header {
+        padding: 10px 5px;
+    }
+    .navbar a {
+        display: none; /* 이미지 숨김 */
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .icon {
+        width: 18px;
+        margin-left: 20px;
+    }
 }
+/* 헤더 끝 */
 
-.logo {
-    width: 150px;
-
-}
-
-
-/* 기본 스타일 */
+/* Hero 시작 */
 .hero-section {
     display: flex;
     align-items: center;
@@ -191,8 +210,6 @@ body, h1, h2, h3, p {
     .hero-overlay h3, .hero-overlay h4 {
         font-size: 1rem; /* 더 작은 폰트 크기 */
     }
-
-
 }
 
 
@@ -261,18 +278,6 @@ body, h1, h2, h3, p {
     .latest-courses-section {
         grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2개의 항목만 표시 */
     }
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.icon {
-    width: 24px;
-    margin-left: 20px;
 }
 
 
@@ -408,3 +413,16 @@ body, h1, h2, h3, p {
     }
 }
 
+
+.footer {
+    background-color: #333;
+    color: #8d8d8d;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 400px) {
+    p {
+        font-size: small;
+    }
+}
