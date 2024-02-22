@@ -30,6 +30,10 @@ body, h1, h2, h3, p {
 }
 
 @media (max-width: 1024px) {
+    .navbar a {
+        display: none;
+    }
+
     .logo-container {
         flex-direction: row;
         align-items: center;
@@ -40,9 +44,6 @@ body, h1, h2, h3, p {
         justify-content: space-between;
         align-items: center;
     }
-    .navbar a[href="#"] {
-        visibility: hidden;
-    }
 
     .logo {
         display: inline-block;
@@ -52,16 +53,9 @@ body, h1, h2, h3, p {
     .icon {
         display: inline-block;
         width: 20px;
-        margin-left: 20px;
-    }
-
-    .icon-logo {
-        display: inline-block;
-    }
-
-    .navbar a:not([href="#"]) {
-        display: inline-block; /* 텍스트가 없어진 아이템들만 보이도록 설정 */
-        margin-left: 10px; /* 텍스트와 아이콘 로고 사이에 간격을 줌 */
+        margin-left: 0;
+        margin-right: 0;
+        object-fit: contain;
     }
 }
 
@@ -75,6 +69,7 @@ body, h1, h2, h3, p {
 .icon {
     width: 24px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .logo {
