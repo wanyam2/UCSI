@@ -52,13 +52,14 @@ body, h1, h2, h3, p {
 
     .logo {
         display: inline-block;
-        margin-bottom: 10px;
+        width: 150px;
     }
 
     .icon {
         display: inline-block;
         width: 24px;
         margin-left: 20px;
+
     }
 
     .icon-logo {
@@ -71,9 +72,9 @@ body, h1, h2, h3, p {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1190px) {
     .header {
-        padding: 10px 5px;
+        padding: 20px 5px;
     }
     .navbar a {
         display: none; /* 이미지 숨김 */
@@ -87,10 +88,13 @@ body, h1, h2, h3, p {
 
 @media (max-width: 768px) {
     .header {
-        padding: 10px 5px;
+        padding: 5px 5px;
     }
     .navbar a {
         display: none; /* 이미지 숨김 */
+    }
+    .logo {
+        width: 120px;
     }
 }
 
@@ -129,14 +133,34 @@ body, h1, h2, h3, p {
 .hero-overlay {
     z-index: 2;
     width: 50%;
+    padding: 20px;
 }
 
 .hero-image {
     width: 40%;
     height: auto;
     position: absolute;
-    right: 50px; /* 오른쪽 여백 */
+    right: 70px; /* 오른쪽 여백 */
     bottom: 0;
+}
+
+.hero-overlay h1 {
+    font-size: 8rem; /* 제목의 글꼴 크기를 조정합니다. */
+    color: #ffffff; /* 제목의 글꼴 색상을 조정합니다. */
+    margin-bottom: 2rem; /* 제목 아래의 여백을 조정합니다. */
+}
+
+.hero-overlay h3 {
+    font-size: 2rem; /* 문단의 글꼴 크기를 조정 */
+    color: #333333; /* 문단의 글꼴 색상을 조정 */
+    margin-bottom: 1rem; /* 문단 아래의 여백을 조정 */
+}
+
+
+.hero-overlay h4 {
+    font-size: 1.5rem; /* 문단의 글꼴 크기를 조정 */
+    color: #333333; /* 문단의 글꼴 색상을 조정 */
+    margin-bottom: 2rem; /* 문단 아래의 여백을 조정 */
 }
 
 /* 뷰포트 너비에 따라 폰트 크기와 이미지 가시성을 조정하는 미디어 쿼리 */
@@ -164,29 +188,20 @@ body, h1, h2, h3, p {
     }
 }
 
-.hero-overlay h1 {
-    font-size: 8rem; /* 제목의 글꼴 크기를 조정합니다. */
-    color: #ffffff; /* 제목의 글꼴 색상을 조정합니다. */
-    margin-bottom: 2rem; /* 제목 아래의 여백을 조정합니다. */
-}
 
-.hero-overlay h3 {
-    font-size: 2rem; /* 문단의 글꼴 크기를 조정 */
-    color: #333333; /* 문단의 글꼴 색상을 조정 */
-    margin-bottom: 1rem; /* 문단 아래의 여백을 조정 */
-}
-
-
-.hero-overlay h4 {
-    font-size: 1.5rem; /* 문단의 글꼴 크기를 조정 */
-    color: #333333; /* 문단의 글꼴 색상을 조정 */
-    margin-bottom: 2rem; /* 문단 아래의 여백을 조정 */
-}
 
 @media (max-width: 768px) {
+    .hero-section {
+        /*height: auto; !* Adjust the height for smaller screens *!*/
+        flex-direction: column; /* Stack the items on smaller screens */
+        height: 100vh;
+        padding: 20px 20px;
+    }
+
     .hero-overlay {
         width: 100%;
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .hero-overlay h1 {
@@ -198,11 +213,23 @@ body, h1, h2, h3, p {
     }
 
     .hero-image {
-        display: none;
+        /*display: none;*/
+        width: 50%;
+        height: auto;
+        position: absolute;
+        right: 70px; /* 오른쪽 여백 */
+        bottom: 20px;
     }
+
 }
 
 @media (max-width: 576px) {
+    .hero-section {
+        /*height: auto; !* Adjust the height for smaller screens *!*/
+        flex-direction: column; /* Stack the items on smaller screens */
+        height: 70vh;
+        padding: 20px 20px;
+    }
     .hero-overlay h1 {
         font-size: 3rem; /* 더 작은 폰트 크기 */
     }
@@ -249,9 +276,9 @@ body, h1, h2, h3, p {
         flex-basis: 100%; /* 더 작은 화면에서는 항목이 화면 전체 너비를 차지하도록 조정 */
     }
 }
+/* Hero 끝 */
 
-/* 여기부터 lastest-course 부분 */
-
+/* lastest-course 시작 */
 .latest-courses-section {
     padding: 20px;
     background-color: #f9f9f9;
@@ -279,9 +306,6 @@ body, h1, h2, h3, p {
         grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2개의 항목만 표시 */
     }
 }
-
-
-
 
 .course-carousel {
     position: relative;
@@ -412,6 +436,7 @@ body, h1, h2, h3, p {
         width: 100%; /* 화면 너비가 400px 이하일 때 1개의 아이템을 한 줄에 표시 */
     }
 }
+/* lastest-course 끝 */
 
 
 .footer {
